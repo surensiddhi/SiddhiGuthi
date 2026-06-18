@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seven Thakalis · Siddhi Family Guthi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage">
+
+<!-- Reusable emblem (placeholder — swap this <symbol> block later) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="0 0 120 120">
+    <g fill="var(--gold-soft)" stroke="none">
+      <circle cx="60" cy="20" r="2.8"/>
+      <ellipse cx="60" cy="30" rx="8" ry="9"/>
+      <path d="M60 40 C 51 40, 45 44, 43 51 C 41 57, 40 63, 39 69 C 33 71, 29 75, 28 80 C 34 86, 46 89, 60 89 C 74 89, 86 86, 92 80 C 91 75, 87 71, 81 69 C 80 63, 79 57, 77 51 C 75 44, 69 40, 60 40 Z"/>
+    </g>
+    <g fill="none" stroke="#0d0805" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M54 41 q6 5 12 0"/>
+      <path d="M60 47 v16"/>
+      <path d="M48 75 q12 7 24 0"/>
+      <path d="M55 73 q5 4 10 0"/>
+      <path d="M40 79 q8 4 16 3 M80 79 q-8 4 -16 3"/>
+    </g>
+  </symbol>
+</svg>
+
+<main class="wrap">
+  <a href="index.html" class="back-link">&larr; Back to portal</a>
+
+  <div class="page-head">
+    <div class="eyebrow">Honoured elders</div>
+    <h2>Seven Thakalis</h2>
+    <p>The seven senior-most elders of the Siddhi family, whose guidance and blessings hold the Guthi together.</p>
+  </div>
+
+  <div class="people" id="peopleList"></div>
+</main>
+
+<footer>
+  <div class="footer-emblem"><svg class="emblem-svg"><use href="#emblem"/></svg></div>
+  Siddhi Family Guthi &middot; Seven Thakalis<br>
+  <span class="copyright">&copy; <span id="year"></span> Surendra Siddhi Bajracharya. All rights reserved.</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="subpages.js"></script>
+<script>renderElders();</script>
+</body>
+</html>

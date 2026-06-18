@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhi Family Guthi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Reusable ghanta (bell) + vajra emblem, side by side -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="0 0 120 120">
+    <g fill="var(--gold-soft)" stroke="none">
+      <circle cx="60" cy="20" r="2.8"/>
+      <ellipse cx="60" cy="30" rx="8" ry="9"/>
+      <path d="M60 40 C 51 40, 45 44, 43 51 C 41 57, 40 63, 39 69 C 33 71, 29 75, 28 80 C 34 86, 46 89, 60 89 C 74 89, 86 86, 92 80 C 91 75, 87 71, 81 69 C 80 63, 79 57, 77 51 C 75 44, 69 40, 60 40 Z"/>
+    </g>
+    <g fill="none" stroke="#0d0805" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M54 41 q6 5 12 0"/>
+      <path d="M60 47 v16"/>
+      <path d="M48 75 q12 7 24 0"/>
+      <path d="M55 73 q5 4 10 0"/>
+      <path d="M40 79 q8 4 16 3 M80 79 q-8 4 -16 3"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="banner">
+  <div class="crest"><svg class="emblem-svg"><use href="#emblem"/></svg></div>
+  <div class="ghar">Guthi Ghar &middot; House for ritual celebration together</div>
+  <h1>Siddhi Family Guthi</h1>
+  <p class="sub">A shared home for our lineage &mdash; preserving rituals, kinship, and the bonds that hold the family as one.</p>
+  <p class="meaning">&#2327;&#2369;&#2336;&#2368; &mdash; the trust that binds generations</p>
+</header>
+
+<!-- LEADERSHIP TRIO -->
+<div class="lead-band">
+  <div class="lead-inner" id="leadBand"></div>
+</div>
+
+<main class="wrap">
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="eyebrow">About the family</div>
+    <h2>The Siddhi Family</h2>
+    <p>The Siddhi Guthi is the living thread of our family &mdash; a tradition passed from our forebears to bring relatives together for worship, festivals, and the quiet duties of kinship. The Guthi Ghar is where we gather to honour our deities, mark life's milestones, and remember those who came before us.</p>
+    <p>This portal is our private space: a single place to find family records, follow upcoming gatherings, view our heritage, and stay connected wherever each of us may live. It belongs to every member of the family.</p>
+  </section>
+
+  <!-- PORTAL BUTTONS -->
+  <section class="sec" id="portal">
+    <h3 class="sec-title">Family records &amp; tools</h3>
+    <div class="grid" id="tiles"></div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="sec" id="events">
+    <h3 class="sec-title">Gatherings</h3>
+    <div class="events">
+      <div class="panel">
+        <h3>&#128197; Upcoming events</h3>
+        <div id="upcoming"></div>
+      </div>
+      <div class="panel">
+        <h3>&#9889; Quick list</h3>
+        <ul class="quick" id="quick"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREY TURN -->
+  <section class="sec" id="prey">
+    <h3 class="sec-title">Fortnightly PUJA turn</h3>
+
+    <!-- Spotlight: current + next few -->
+    <div class="prey-spotlight">
+      <div class="prey-now">
+        <span class="now-label">This fortnight</span>
+        <span class="now-name" id="nowName">&mdash;</span>
+        <span class="now-dates" id="nowDates"></span>
+      </div>
+      <div class="prey-next">
+        <span class="next-label">Coming up</span>
+        <ul id="nextUp"></ul>
+      </div>
+    </div>
+
+    <!-- Find your turn -->
+    <div class="prey-find">
+      <input type="search" id="preySearch" placeholder="Type a name to find their turn&hellip;" aria-label="Search for a member's turn">
+      <div id="searchResult" class="search-result"></div>
+    </div>
+
+    <!-- Full rotation, collapsed -->
+    <details class="prey-all">
+      <summary>View full rotation (<span id="memberCount">0</span> members)</summary>
+      <ul class="prey-list" id="preyList"></ul>
+    </details>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-emblem"><svg class="emblem-svg"><use href="#emblem"/></svg></div>
+  Siddhi Family Guthi &middot; Private family portal<br>
+  For family use only<br>
+  <span class="copyright">&copy; <span id="year"></span> Surendra Siddhi Bajracharya. All rights reserved.</span>
+</footer>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-bar">
+      <h4 id="modalTitle">App</h4>
+      <button id="closeBtn" aria-label="Close">&times;</button>
+    </div>
+    <div class="frame-clip">
+      <div class="loading" id="loading"><span class="spin"></span> Loading&hellip;</div>
+      <iframe id="frame" title="Family app"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="nepali-date.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
