@@ -3,6 +3,7 @@
    Google Apps Script web app  -> ends in /exec
    Supabase / hosted app        -> full https url
    ========================================================= */
+/*
 const APPS = [
   { key:"elders",    title:"Seven Thakalis",     desc:"Top seven elders",         url:"elders.html",    icon:"elder" },
   { key:"committee", title:"Executive Committee", desc:"Current office bearers",    url:"committee.html", icon:"committee" },
@@ -11,6 +12,22 @@ const APPS = [
   { key:"assets",    title:"Asset List",          desc:"Guthi property register",  url:"https://script.google.com/macros/s/REPLACE_ASSETS/exec",    icon:"assets" },
   { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"https://script.google.com/macros/s/REPLACE_TREE/exec",      icon:"tree" },
 ];
+*/
+const APPS = [
+  { key:"elders",    title:"Seven Thakalis",     desc:"Top seven elders",         url:"elders.html",    icon:"elder" },
+  { key:"committee", title:"Executive Committee", desc:"Current office bearers",    url:"committee.html", icon:"committee" },
+  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/REPLACE_ACCOUNT/exec",   icon:"account", comingSoon: true },
+  { key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"https://script.google.com/macros/s/REPLACE_GALLERY/exec",   icon:"gallery", comingSoon: true },
+  { key:"assets",    title:"Asset List",          desc:"Guthi property register",  url:"https://script.google.com/macros/s/REPLACE_ASSETS/exec",    icon:"assets", comingSoon: true },
+  { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"https://script.google.com/macros/s/REPLACE_TREE/exec",      icon:"tree", comingSoon: true },
+];
+
+// Then in your click handler:
+if (app.comingSoon) {
+  alert('Coming soon! 🚀');
+  return;
+}
+
 
 /* Events — edit freely or wire to your DB later */
 const EVENTS = [
