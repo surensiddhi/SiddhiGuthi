@@ -120,29 +120,31 @@
   /* ---------- Modal / iframe ---------- */
   .overlay{
     position:fixed;inset:0;background:rgba(35,15,8,.6);backdrop-filter:blur(3px);
-    display:none;align-items:center;justify-content:center;padding:18px;z-index:50;
+    display:none;align-items:center;justify-content:center;padding:8px;z-index:50;
   }
   .overlay.on{display:flex}
   .modal{
-    background:var(--card);border-radius:16px;width:100%;max-width:1000px;height:88vh;
+    background:var(--card);border-radius:16px;width:100%;max-width:1200px;height:94vh;
     display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--gold);
     box-shadow:0 30px 80px rgba(0,0,0,.4);
+    /* per-app clip amount (px) to hide a provider banner; default 0 = no clip */
+    --clip:0px;
   }
   .modal-bar{
     display:flex;align-items:center;justify-content:space-between;
     background:linear-gradient(135deg,var(--maroon),var(--maroon-deep));color:var(--paper);
-    padding:14px 18px;
+    padding:7px 16px;
   }
-  .modal-bar h4{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600}
-  .modal-bar button{background:rgba(255,255,255,.15);border:none;color:#fff;width:34px;height:34px;
-    border-radius:8px;font-size:1.2rem;cursor:pointer;transition:background .15s}
+  .modal-bar h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600}
+  .modal-bar button{background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;
+    border-radius:8px;font-size:1.1rem;cursor:pointer;transition:background .15s}
   .modal-bar button:hover{background:rgba(255,255,255,.3)}
-  /* iframe wrapper crops the top Google Apps Script bar to hide its banner */
+  /* iframe wrapper; clip is configurable per app via --clip (0 by default) */
   .frame-clip{flex:1;position:relative;overflow:hidden;background:var(--paper)}
   .frame-clip iframe{
     position:absolute;left:0;width:100%;border:0;
-    top:-40px;            /* push the Google message above the visible area */
-    height:calc(100% + 40px);
+    top:calc(-1 * var(--clip));        /* hide top var(--clip)px if a banner needs hiding */
+    height:calc(100% + var(--clip));
   }
   .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
     color:var(--muted);font-style:italic;gap:10px}
