@@ -2,15 +2,20 @@
    CONFIG — replace the url values with your real app links.
    Google Apps Script web app  -> ends in /exec
    Supabase / hosted app        -> full https url
+
+   clip (optional): pixels to hide from the TOP of the embedded app,
+   only if a provider shows a banner you want to crop out. Keep 0 normally.
+   Your Apps Script apps use setXFrameOptionsMode(ALLOWALL) and show no
+   banner, so clip stays 0 — the full app header & hamburger menu show.
    ========================================================= */
 
 const APPS = [
-  { key:"elders",    title:"Seven Thakalis",     desc:"Top seven elders",         url:"elders.html",    icon:"elder" },
-  { key:"committee", title:"Executive Committee", desc:"Current office bearers",    url:"committee.html", icon:"committee" },
-  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/AKfycbx0qS41qRUTuXCgdGwJPButa9qcLSOYj7OZdNBOgpnIXi3dMTSK4Py9B3vVpTpFuNzlEA/exec",   icon:"account" },
-  { key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"comingsoon.html",   icon:"gallery" },
-  { key:"assets",    title:"Asset List",          desc:"Guthi property register",  url:"comingsoon.html",    icon:"assets" },
-  { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"https://script.google.com/macros/s/AKfycbzlcmgqtc46yO9ko-xOGqXyZFfMzAZCuPSfJZiZQlxYt3rk5_29uSlijX2TwmxQRf1fqA/exec",      icon:"tree" },
+  { key:"elders",    title:"Seven Thakalis",     desc:"Top seven elders",         url:"elders.html",    icon:"elder",     clip:0 },
+  { key:"committee", title:"Executive Committee", desc:"Current office bearers",    url:"committee.html", icon:"committee", clip:0 },
+  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/AKfycbx0qS41qRUTuXCgdGwJPButa9qcLSOYj7OZdNBOgpnIXi3dMTSK4Py9B3vVpTpFuNzlEA/exec",   icon:"account", clip:0 },
+  { key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"comingsoon.html",   icon:"gallery", clip:0 },
+  { key:"assets",    title:"Asset List",          desc:"Guthi property register",  url:"comingsoon.html",    icon:"assets", clip:0 },
+  { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"https://script.google.com/macros/s/AKfycbzlcmgqtc46yO9ko-xOGqXyZFfMzAZCuPSfJZiZQlxYt3rk5_29uSlijX2TwmxQRf1fqA/exec",      icon:"tree", clip:0 },
 
   //{ key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/REPLACE_ACCOUNT/exec",   icon:"account" },
   //{ key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"https://script.google.com/macros/s/REPLACE_GALLERY/exec",   icon:"gallery" },
@@ -195,12 +200,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 /* Modal logic */
 const overlay=document.getElementById('overlay');
+const modalEl=overlay.querySelector('.modal');
 const frame=document.getElementById('frame');
 const loading=document.getElementById('loading');
 const modalTitle=document.getElementById('modalTitle');
 
 function openApp(a){
   modalTitle.innerHTML=a.title;
+  modalEl.style.setProperty('--clip', (a.clip||0)+'px');  // configurable per-app crop
   loading.style.display='flex';
   frame.src=a.url;
   overlay.classList.add('on');
