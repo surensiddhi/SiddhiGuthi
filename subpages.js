@@ -67,4 +67,9 @@ function renderCommittee(){
 document.addEventListener('DOMContentLoaded', ()=>{
   const y = document.getElementById('year');
   if(y) y.textContent = new Date().getFullYear();
+
+  /* Hide "Back to portal" when shown inside the modal (iframe).
+     It stays visible when the page is opened directly on its own. */
+  const back = document.getElementById('backLink');
+  if(back && window.self !== window.top) back.style.display = 'none';
 });
