@@ -7,10 +7,10 @@
 const APPS = [
   { key:"elders",    title:"Seven Thakalis",     desc:"Top seven elders",         url:"elders.html",    icon:"elder" },
   { key:"committee", title:"Executive Committee", desc:"Current office bearers",    url:"committee.html", icon:"committee" },
-  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"comingsoon.html",   icon:"account" },
+  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/AKfycbx0qS41qRUTuXCgdGwJPButa9qcLSOYj7OZdNBOgpnIXi3dMTSK4Py9B3vVpTpFuNzlEA/exec",   icon:"account" },
   { key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"comingsoon.html",   icon:"gallery" },
   { key:"assets",    title:"Asset List",          desc:"Guthi property register",  url:"comingsoon.html",    icon:"assets" },
-  { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"comingsoon.html",      icon:"tree" },
+  { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"https://script.google.com/macros/s/AKfycbzlcmgqtc46yO9ko-xOGqXyZFfMzAZCuPSfJZiZQlxYt3rk5_29uSlijX2TwmxQRf1fqA/exec",      icon:"tree" },
 
   //{ key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/REPLACE_ACCOUNT/exec",   icon:"account" },
   //{ key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"https://script.google.com/macros/s/REPLACE_GALLERY/exec",   icon:"gallery" },
