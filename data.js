@@ -24,7 +24,7 @@ const COMMITTEE = {
   term: "2082–2084 B.S.",
   members: [
     { name:"Surendra Siddhi Bajracharya", position:"Chairman",        period:"2082–2084", phone:"", email:"" },
-    { name:"Amrit Siddhi Bajracharya",    position:"Vice Chairman",  period:"2082–2084", phone:"", email:"" },
+    { name:"Amrit Siddhi Bajracharya",    position:"Vice Chairman",   period:"2082–2084", phone:"", email:"" },
     { name:"Nava Raj Siddhi Bajracharya", position:"Secretary",       period:"2082–2084", phone:"", email:"" },
     { name:"Ananda Siddhi Bajracharya",   position:"Joint Secretary", period:"2082–2084", phone:"", email:"" },
     { name:"Roop Siddhi Bajracharya",     position:"Treasurer",       period:"2082–2084", phone:"", email:"" },
