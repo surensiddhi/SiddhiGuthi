@@ -10,10 +10,10 @@
    ========================================================= */
 
 const APPS = [
-  { key:"elders",    title:"Seven Thakalis",     desc:"Top seven elders",         url:"elders.html",    icon:"elder",     clip:0 },
-  { key:"committee", title:"Executive Committee", desc:"Current office bearers",    url:"committee.html", icon:"committee", clip:0 },
-  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions",     url:"https://script.google.com/macros/s/AKfycbx0qS41qRUTuXCgdGwJPButa9qcLSOYj7OZdNBOgpnIXi3dMTSK4Py9B3vVpTpFuNzlEA/exec",   icon:"account", clip:0 },
-  { key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",        url:"comingsoon.html",   icon:"gallery", clip:0 },
+  { key:"elders",    title:"Seven Thakalis",      desc:"Top seven elders",         url:"elders.html",    icon:"elder",     clip:0 },
+  { key:"committee", title:"Executive Committee", desc:"Current office bearers",   url:"committee.html", icon:"committee", clip:0 },
+  { key:"account",   title:"Guthi Account",       desc:"Funds &amp; transactions", url:"https://script.google.com/macros/s/AKfycbx0qS41qRUTuXCgdGwJPButa9qcLSOYj7OZdNBOgpnIXi3dMTSK4Py9B3vVpTpFuNzlEA/exec",   icon:"account", clip:0 },
+  { key:"gallery",   title:"Photo Gallery",       desc:"Memories &amp; events",    url:"comingsoon.html",   icon:"gallery", clip:0 },
   { key:"assets",    title:"Asset List",          desc:"Guthi property register",  url:"comingsoon.html",    icon:"assets", clip:0 },
   { key:"tree",      title:"Family Tree",         desc:"Our lineage",              url:"https://script.google.com/macros/s/AKfycbzlcmgqtc46yO9ko-xOGqXyZFfMzAZCuPSfJZiZQlxYt3rk5_29uSlijX2TwmxQRf1fqA/exec",      icon:"tree", clip:0 },
 
@@ -26,10 +26,10 @@ const APPS = [
 /* Events — edit freely or wire to your DB later */
 const EVENTS = [
   // date in ISO (YYYY-MM-DD, English). Nepali date is shown automatically.
-  { date:"2026-07-24", name:"De Puja, Annual Guthi Starts",       meta:"Guthi Ghar &middot; 9:00 AM", tag:"Ritual" },
+  { date:"2026-06-20", name:"Siti Nakha",       meta:"Guthi Ghar &middot; 9:00 AM", tag:"Meeting" },
   { date:"2026-08-10", name:"Pancha Daan, Annusal Daan Gathering", meta:"Guthi Ghar Bahal &middot; Morning", tag:"Festival" },
   { date:"2026-10-21", name:"Dashain Family Reunion",   meta:"Ancestral home, Aagan Ghar",             tag:"Festival" },
-  { date:"2026-09-02", name:"Chovar Annual Pooza", meta:"Chovar &middot; 4:00 PM", tag:"Meeting" },
+  { date:"2026-09-02", name:"Chovar Annual Pooza", meta:"Chovar &middot; 4:00 PM", tag:"Ritual" },
   { date:"2026-10-21", name:"Swoyambhu Pooza",   meta:"Swoyambhu",             tag:"Festival" },
   { date:"2026-10-21", name:"Desi Pooja Final Family Reunion",   meta:"Aagan Ancestral home",             tag:"Festival" },
 ];
